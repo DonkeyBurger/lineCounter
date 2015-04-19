@@ -1,7 +1,7 @@
 # lineCounter
 It's a tool to count effective code lines.
 
-Usage: lineCounter -ext <file ext> -verbose <level of verbose> <file list>
+Usage: lineCounter -ext "file ext" -verbose "level of verbose" "file list"
 
 	file ext: the surfix of files that will be counted. Default is "go".
 
