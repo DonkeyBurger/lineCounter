@@ -64,7 +64,7 @@ func (this *countCFile) countFile(fileName *string) (line int) {
 	inComment := false
 
 	if *verbose > 3 {
-		fmt.Printf("count: %s\n", fileName)
+		fmt.Printf("count: %s\n", *fileName)
 	}
 	if !strings.HasSuffix(*fileName, *extension) {
 		return
@@ -103,10 +103,10 @@ func (this *countCFile) countFile(fileName *string) (line int) {
 	}
 	err = scanner.Err()
 	if err != nil {
-		log.Println(fileName, ": ", err)
+		log.Println(*fileName, ": ", err)
 	}
 	if *verbose > 1 {
-		fmt.Printf("%s:%d\n", fileName, line)
+		fmt.Printf("%s:%d\n", *fileName, line)
 	}
 	return line
 }

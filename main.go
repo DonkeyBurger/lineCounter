@@ -70,7 +70,7 @@ func countDir(rootPath *string) (line int) {
 		}
 	}
 	if *verbose > 0 {
-		fmt.Printf("%s: %d\n", rootPath, line)
+		fmt.Printf("%s: %d\n", *rootPath, line)
 	}
 	return line
 }
