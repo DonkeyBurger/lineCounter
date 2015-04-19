@@ -42,7 +42,7 @@ func (this *countCFile) checkLine(line string) (allComment bool, transition int)
 		return
 	}
 
-	matched, _ = regexp.MatchString("^\\s*\\w\\w*", line)
+	matched, _ = regexp.MatchString("^\\s*[\\w})\"]\\w*", line)
 	if matched {
 		allComment = false
 	}
